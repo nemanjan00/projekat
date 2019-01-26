@@ -20,7 +20,7 @@ void setup() {
 		; // wait for serial port to connect. Needed for native USB, on LEONARDO, MICRO, YUN, and other 32u4 based boards.
 	}
 
-	xTaskCreateStatic(
+	xTaskCreate(
 		TaskDigitalRead
 		,  (const portCHAR *)"DigitalRead"	// A name just for humans
 		,  128	// This stack size can be checked & adjusted by reading the Stack Highwater
@@ -28,7 +28,7 @@ void setup() {
 		,  2	// Priority, with 3 (configMAX_PRIORITIES - 1) being the highest, and 0 being the lowest.
 		,  NULL );
 
-	xTaskCreateStatic(
+	xTaskCreate(
 		TaskAnalogRead
 		,  (const portCHAR *) "AnalogRead"
 		,  128	// Stack size
