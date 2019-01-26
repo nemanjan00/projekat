@@ -1,0 +1,3 @@
+[submodule "libraries/Arduino_FreeRTOS_Library"]
+	path = libraries/Arduino_FreeRTOS_Library
+	url = git@github.com:nemanjan00/Arduino_FreeRTOS_Library.git
